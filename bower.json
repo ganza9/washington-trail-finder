@@ -1,0 +1,17 @@
+{
+  "name": "washington-trail-finder",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/ganza9/washington-trail-finder",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
