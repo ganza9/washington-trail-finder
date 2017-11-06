@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Trail } from '../trail.model';
 
 @Component({
   selector: 'app-trail-detail',
