@@ -1,3 +1,7 @@
-<p>
-  result works!
-</p>
+<h1>hike results:</h1>
+
+<div *ngFor="let trail of childHikes.trails;" class="hike">
+  <h4>{{trail.name}}</h4>
+  <p>{{trail.summary}}</p>
+  <img src="{{trail.imgSmall}}" alt="">
+</div>
