@@ -19,11 +19,10 @@ _An app that allows the user find a hiking trailhead based on a set of parameter
 
 ## Specifications
 
-<!-- * _User will search the database by entering a medical condition in textbox and get a list of doctors in the Seattle area._
-* _User will search the database by entering a name in the textbox and get a list of doctors in the Seattle area._
-* _If the query returns any doctors, the following info should be included: first name, last name, address, phone number, website, and whether the doctor is accepting new patients._
-* _Non 200 OK responses (errors) should return with error message and information about type of error._
-* _If no doctors meet the search criteria, a error message should be returned: "Sorry, there aren't any doctors who fit what you are seeking."_ -->
+* _User can search for a hike in Washington state based on specific criteria._
+* _Search queries will be returned based on length of hike, difficulty of hike, and elevation gained during hike._
+* _Information about each query response can be viewed in detail including: name, a brief summary, difficulty, location, length, ascent and descent, images --if available-- and ratings (1-5 stars)._
+* _If no trails meet the search criteria, a error message should be returned: "Sorry, there aren't any trails that fit what you are seeking. Please try again with different search requirements."_
 
 ## Known Bugs
 
