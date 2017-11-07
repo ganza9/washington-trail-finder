@@ -13,9 +13,11 @@ _An app that allows the user find a hiking trailhead based on a set of parameter
 * _Clone the repository from: [github.com/ganza9/washington-trail-finder](https://github.com/ganza9/washington-trail-finder.git)._
 * _Run ```npm install```_
 * _Run ```bower install```_
-* _Sign up for a free API key at: [https://developer.betterdoctor.com/](https://developer.betterdoctor.com/)_
+* _Sign up for a free API key at: [https://www.hikingproject.com/data](https://www.hikingproject.com/data)_
 * _Create a .env file in your top level with the following code format: exports.apiKey = "YOUR-API-KEY"_
 *_Navigate to ```localhost:4200``` with your preferred browser._
+
+<!-- ###Remove this when we launch: 200180106-5113fcb60d3dfa2ee0f45d8d886c22d0 -->
 
 ## Specifications
 
