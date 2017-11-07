@@ -2,12 +2,12 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 //
 // import { TrailDetailComponent } from './trail-detial/trail-detail.component';
-import { SearchComponent } from './search/search.component';
+import { MapComponent } from './map/map.component';
 
 const appRoutes: Routes = [
   {
     path: '',
-    component: SearchComponent
+    component: MapComponent
   },
 //   {
 //     path: 'trail-detail',

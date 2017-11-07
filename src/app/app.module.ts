@@ -9,6 +9,7 @@ import { MapComponent } from './map/map.component';
 import { TrailDetailComponent } from './trail-detail/trail-detail.component';
 import { SearchComponent } from './search/search.component';
 import { ResultComponent } from './result/result.component';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,10 @@ import { ResultComponent } from './result/result.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCHTINprNcx57bRSqxyR-dBagv79_kMSY8'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
