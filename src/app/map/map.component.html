@@ -1,16 +1,16 @@
 <div id="map">
-  <agm-map [latitude]="51.673858" [longitude]="7.815982">
+  <agm-map [latitude]="47.751076" [longitude]="-120.740135" #gm>
   <agm-marker-cluster imagePath="https://raw.githubusercontent.com/googlemaps/v3-utility-library/master/markerclustererplus/images/m">
-    <agm-marker [latitude]="51.673858" [longitude]="7.815982" *ngIf="!childHikes"></agm-marker>
-      <div *ngIf="childHikes">
+    <agm-marker [latitude]="lat" [longitude]="long" *ngIf="!childHikes"></agm-marker>
+    <div *ngIf="childHikes">
     <div *ngFor="let trail of childHikes.trails">
-      <agm-marker [latitude]="trail.latitude" [longitude]="trail.longitude"></agm-marker><!-- multiple markers -->
+      <agm-marker [latitude]="trail.latitude" [longitude]="trail.longitude" (mouseOver)="onMouseOver(infoWindow,gm)">
+        <agm-info-window [disableAutoPan]="false" #infoWindow>
+          <strong>{{trail.name}}</strong>
+        </agm-info-window>
+      </agm-marker><!-- multiple markers -->
     </div>
   </div>
-
   </agm-marker-cluster>
   </agm-map>
-
-
-
 </div>

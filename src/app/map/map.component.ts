@@ -7,12 +7,26 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class MapComponent  implements OnInit {
   @Input() childHikes;
-  lat = 47.6062;
-  lng= 122.3321;
-  constructor() { }
+  lat: number;
+  long: number;
+  findcurrentPosition(){
+    navigator.geolocation.getCurrentPosition(data => {
+      this.lat = data.coords.latitude;
+      this.long = data.coords.longitude;
+    });
+  }
+  onMouseOver(infoWindow, gm) {
+    if (gm.lastOpen != null) {
+      gm.lastOpen.close();
+    }
+    gm.lastOpen = infoWindow;
+    infoWindow.open();
+  }
+
+  constructor() {}
 
   ngOnInit() {
-
+    this.findcurrentPosition();
   }
   title: string = 'My first AGM project';
 
