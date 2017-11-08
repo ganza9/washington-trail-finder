@@ -19,7 +19,7 @@ export class SearchComponent implements OnInit {
   constructor(private washingtonHikeResults: WashingtonHikeApiResultsService, private geocodeResults: CityToLatLonService) { }
 
   searchByGeocode(location: string){
-    this.geocodeResults.searchByGeocode(location).subscribe(response => {
+    this.geocodeResults.getByCityName(location).subscribe(response => {
       this.cities = response.json();
     });
   }

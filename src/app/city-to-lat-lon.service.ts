@@ -9,7 +9,8 @@ export class CityToLatLonService {
 
   constructor(private http: Http) { }
 
-  searchByGeocode(name: string) {
-    return this.http.get(`${this.baseUrl}address=${name}&key=${geolocationKey}` )
+  getByCityName(name: string) {
+    return this.http.get(`${this.baseUrl}address=${name}&key=${geolocationKey}`);
   }
+
 }
