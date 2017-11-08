@@ -1,17 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { WashingtonHikeApiResultsService } from './../washington-hike-api-results.service'
+import { WashingtonHikeApiResultsService } from './../washington-hike-api-results.service';
+import { CityToLatLonService } from './../city-to-lat-lon.service';
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css'],
-  providers: [ WashingtonHikeApiResultsService ]
+  providers: [
+    WashingtonHikeApiResultsService,
+    CityToLatLonService ]
 })
 export class SearchComponent implements OnInit {
   hikes: any[]=null;
   noHikes: boolean = false;
-  constructor(private washingtonHikeResults: WashingtonHikeApiResultsService) { }
+  cities: any[]=null;
+
+  constructor(private washingtonHikeResults: WashingtonHikeApiResultsService, private geocodeResults: CityToLatLonService) { }
+
+  searchByGeocode(location: string){
+    this.geocodeResults.searchByGeocode(location).subscribe(response => {
+      this.cities = response.json();
+    });
+  }
 
   getHikeResults(lat: string, lon: string){
     this.noHikes = false;
@@ -25,8 +36,6 @@ export class SearchComponent implements OnInit {
       }
     });
   }
-
-
 
 
   ngOnInit() {

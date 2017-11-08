@@ -10,12 +10,21 @@
       <label for="hike-name">Longitude:</label>
       <input type=text #lon>
     </div>
-    <button (click)="getHikeResults(lat.value, lon.value)">Get Hikes</button>
+    <div class="form-group">
+      <label for="cityFind">Location:</label>
+      <input type="text" #city>
+    </div>
+    <button (click)="getHikeResults(lat.value, lon.value)" (click)="searchByGeocode(city.value)">Get Hikes</button>
   </form>
+
+  <div *ngFor="let city of cities.results">
+    <h2>{{city.geometry.location.lat}}, {{city.geometry.location.lng}}</h2>
+  </div>
 
 <div *ngIf="hikes && !noHikes">
   <app-result [childHikes]="hikes"></app-result>
 </div>
+
 <div *ngIf="noHikes">
   <h3>There are no hikes in your area</h3>
 </div>
