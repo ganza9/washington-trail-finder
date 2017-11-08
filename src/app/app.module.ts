@@ -10,6 +10,7 @@ import { TrailDetailComponent } from './trail-detail/trail-detail.component';
 import { SearchComponent } from './search/search.component';
 import { ResultComponent } from './result/result.component';
 import { AgmCoreModule } from '@agm/core';
+import { AgmJsMarkerClustererModule } from '@agm/js-marker-clusterer'
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AgmCoreModule } from '@agm/core';
     routing,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCHTINprNcx57bRSqxyR-dBagv79_kMSY8'
-    })
+    }),
+    AgmJsMarkerClustererModule
   ],
   providers: [],
   bootstrap: [AppComponent]

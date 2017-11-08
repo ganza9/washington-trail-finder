@@ -9,7 +9,7 @@ import { ResultComponent } from './result/result.component';
 const appRoutes: Routes = [
   {
     path: '',
-    component: MapComponent
+    component: SearchComponent
   },
   {
     path: 'search',

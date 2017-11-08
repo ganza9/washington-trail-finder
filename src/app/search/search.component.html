@@ -1,4 +1,6 @@
-<h1>Search Hikes:</h1>
+
+  <app-map [childHikes]="hikes"></app-map>
+  <h1>Search Hikes:</h1>
   <form>
     <div class="form-group">
       <label for="hike-name">Lattitude:</label>
@@ -10,7 +12,6 @@
     </div>
     <button (click)="getHikeResults(lat.value, lon.value)">Get Hikes</button>
   </form>
-
 
 <div *ngIf="hikes && !noHikes">
   <app-result [childHikes]="hikes"></app-result>
