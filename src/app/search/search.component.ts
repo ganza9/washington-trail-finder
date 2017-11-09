@@ -17,6 +17,7 @@ export class SearchComponent implements OnInit {
   cities;
   lattitude: string;
   longitude: string;
+  latLng:any = null;
 
   constructor(private washingtonHikeResults: WashingtonHikeApiResultsService, private geocodeResults: CityToLatLonService) { }
 
@@ -27,10 +28,13 @@ export class SearchComponent implements OnInit {
       this.longitude = this.cities.results[0].geometry.location.lng;
 
       this.noHikes = false;
-
       this.washingtonHikeResults.getTrailByLatLon(this.lattitude, this.longitude).subscribe(response => {
       if(response.json().trails.length > 0 ){
         this.hikes = response.json();
+        this.latLng = {
+          latitude: this.lattitude,
+          longitude: this.longitude
+        }
       }
       else {
         this.noHikes = true;
