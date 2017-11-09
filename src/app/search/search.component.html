@@ -1,5 +1,4 @@
-
-  <app-map [childHikes]="hikes" [childLatLng]="latLng"></app-map>
+<div class="container">
   <h1>Search Hikes:</h1>
   <form>
     <div class="form-group">
@@ -10,7 +9,7 @@
   </form>
   <br>
 
-  <app-map [childHikes]="hikes"></app-map>
+  <app-map [childHikes]="hikes" [childLatLng]="latLng"></app-map>
 
   <div *ngIf="cities">
     <div *ngFor="let city of cities.results">
