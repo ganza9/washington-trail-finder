@@ -6,11 +6,11 @@
   background-repeat: no-repeat;
   background-position: center;*/
   font-family: 'Bungee Inline', cursive;
-  background-color: #044c04;
+  background-color: #d4bb34;
 }
 .wrapper {
   background: #044c04 !important;
-  border: 1px solid #d4bb34 !important;
+  border: 1px solid #044c04 !important;
 }
 .navbar{
   margin-bottom: 0 !important;
@@ -21,5 +21,16 @@
 
 h1 {
   font-size: 120px;
-  color: #d4bb34;
+  color: #044c04;
 }
+
+/*.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 26.6%;
+    background-color: #044c04;
+    color: white;
+    text-align: center;
+}*/
