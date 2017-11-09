@@ -7,10 +7,12 @@
   background-position: center;*/
   font-family: 'Bungee Inline', cursive;
   background-color: #d4bb34;
+  padding-left: 3em;
 }
 .wrapper {
   background: #044c04 !important;
   border: 1px solid #044c04 !important;
+  margin-bottom: 4em;
 }
 .navbar{
   margin-bottom: 0 !important;

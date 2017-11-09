@@ -1,24 +1,23 @@
-<<<<<<< HEAD
-<div>
-  <h4><b>Name:</b> {{trailArray.name}}</h4>
-  <p><b>Description:</b> {{trailArray.summary}}</p>
-  <p><b>Star Rating:</b> {{trailArray.stars}}/5</p>
-  <p><b>Location:</b> {{trailArray.location}}</p>
-  <p><b>Trail Length:</b> {{trailArray.length}}</p>
-  <p><b>Tail Ascent:</b> {{trailArray.ascent}}</p>
-  <p><b>Trail Descent:</b> {{trailArray.descent}}</p>
-  <p><b>Elevation High:</b> {{trailArray.high}}</p>
-  <p><b>Elevation Low:</b> {{trailArray.low}}</p>
-  <p><b>Latitude:</b> {{trailArray.latitude}}</p>
-  <p><b>Longitude:</b> {{trailArray.longitude}}</p>
-<<<<<<< HEAD
-=======
-<div *ngIf='trailArray'>
-  <h4>{{trailArray.name}}</h4>
-  <p>{{trailArray.summary}}</p>
->>>>>>> map
-  <img src="{{trailArray.imgSmall}}">
-=======
-  <img src="{{trailArray.imgSmallMed}}">
->>>>>>> style
+
+<div class="container">
+  <div class="row">
+    <div class="col col-lg-6">
+      <h1>{{trailArray.name}}</h1>
+      <img src="{{trailArray.imgMedium}}">
+
+    </div>
+    <div class="col col-lg-6">
+      <p><em>Description:</em> <span class="detailInfo">{{trailArray.summary}}</span></p>
+      <p><em>Star Rating:</em> <span class="detailInfo">{{trailArray.stars}}/5</span></p>
+      <p><em>Location:</em> <span class="detailInfo">{{trailArray.location}}</span></p>
+      <p><em>Trail Length:</em> <span class="detailInfo">{{trailArray.length}}</span></p>
+      <p><em>Tail Ascent:</em> <span class="detailInfo">{{trailArray.ascent}}</span></p>
+      <p><em>Trail Descent:</em> <span class="detailInfo">{{trailArray.descent}}</span></p>
+      <p><em>Elevation High:</em> <span class="detailInfo">{{trailArray.high}}</span></p>
+      <p><em>Elevation Low:</em> <span class="detailInfo">{{trailArray.low}}</span></p>
+      <p><em>Latitude:</em> <span class="detailInfo">{{trailArray.latitude}}</span></p>
+      <p><em>Longitude:</em> <span class="detailInfo">{{trailArray.longitude}}</span></p>
+    </div>
+
+  </div>
 </div>
