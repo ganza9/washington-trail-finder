@@ -1,7 +1,13 @@
 <h1>Hikes In The Area:</h1>
 
 <div *ngFor="let trail of childHikes.trails;" class="hike">
-  <h4>{{trail.name}}</h4>
-  <p>{{trail.summary}}</p>
-  <img src="{{trail.imgSmall}}" (click)="showTrailDetails(trail)">
+  <div class="row">
+    <div class="col col-lg-6">
+      <h2>{{trail.name}}</h2>
+      <p>{{trail.summary}}</p>
+    </div>
+    <div class="col col-lg-6">
+      <img src="{{trail.imgSmall}}" (click)="showTrailDetails(trail)">
+    </div>
+  </div>
 </div>
