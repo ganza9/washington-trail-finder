@@ -12,5 +12,4 @@ export class CityToLatLonService {
   getByCityName(name: string) {
     return this.http.get(`${this.baseUrl}address=${name}&key=${geolocationKey}`);
   }
-
 }

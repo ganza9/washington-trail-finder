@@ -1,21 +1,16 @@
-
-  <app-map [childHikes]="hikes"></app-map>
+<div class="container">
   <h1>Search Hikes:</h1>
   <form>
-    <!-- <div class="form-group">
-      <label for="hike-name">Lattitude:</label>
-      <input type=text #lat>
-    </div>
     <div class="form-group">
-      <label for="hike-name">Longitude:</label>
-      <input type=text #lon>
-    </div> -->
-    <div class="form-group">
-      <label for="cityFind">Location:</label>
+      <label for="cityFind" id="location">Location:</label>
       <input type="text" #city>
     </div>
-    <button (click)="searchByGeocode(city.value)">Get Hikes</button>
+    <button class="btn btn-default" (click)="searchByGeocode(city.value)">Get Hikes</button>
   </form>
+  <br>
+
+  <app-map [childHikes]="hikes"></app-map>
+
   <div *ngIf="cities">
     <div *ngFor="let city of cities.results">
       <!-- <h2>{{city.geometry.location.lat}}, {{city.geometry.location.lng}}</h2> -->
@@ -23,10 +18,11 @@
   </div>
 
 
-<div *ngIf="hikes && !noHikes">
-  <app-result [childHikes]="hikes"></app-result>
-</div>
+  <div *ngIf="hikes && !noHikes">
+    <app-result [childHikes]="hikes"></app-result>
+  </div>
 
-<div *ngIf="noHikes">
-  <h3>There are no hikes in your area</h3>
+  <div *ngIf="noHikes">
+    <h3>There are no hikes in your area</h3>
+  </div>
 </div>
