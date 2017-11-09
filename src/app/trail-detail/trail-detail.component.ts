@@ -21,6 +21,4 @@ export class TrailDetailComponent implements OnInit {
     })
     this.trailArray = this.appState.getData();
   }
-
-
 }
