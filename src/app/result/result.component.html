@@ -1,6 +1,6 @@
 <h1>hike results:</h1>
 
-<div *ngFor="let trail of childHikes.trails;" class="hike">
+<div *ngFor="let trail of childHikes.trails;" (click)="goToDetailPage(trail)" class="hike">
   <h4>{{trail.name}}</h4>
   <p>{{trail.summary}}</p>
   <img src="{{trail.imgSmall}}">

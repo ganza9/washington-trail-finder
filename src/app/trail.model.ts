@@ -7,6 +7,7 @@ export class Trail {
     public location: string,
     public length: number,
     public ascent: number,
-    public descent: number
+    public descent: number,
+    public id: number
   ) {}
 }

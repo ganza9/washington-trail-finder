@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { MapComponent } from './map/map.component';
 import { SearchComponent } from './search/search.component';
 import { ResultComponent } from './result/result.component';
+import { TrailDetailComponent } from './trail-detail/trail-detail.component';
 
 const appRoutes: Routes = [
   {
@@ -16,13 +17,13 @@ const appRoutes: Routes = [
     component: SearchComponent
   },
   {
-      path: '',
-      component: ResultComponent
-  }
-//   {
-//     path: 'trail-detail',
-//     component: TrailDetailComponent
-//   },
+    path: '',
+    component: ResultComponent
+  },
+  {
+    path: 'trails/:id',
+    component: TrailDetailComponent
+  },
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
