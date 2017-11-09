@@ -3,5 +3,5 @@
 <div *ngFor="let trail of childHikes.trails;" class="hike">
   <h4>{{trail.name}}</h4>
   <p>{{trail.summary}}</p>
-  <img src="{{trail.imgSmall}}">
+  <img src="{{trail.imgSmall}}" (click)="showTrailDetails(trail)">
 </div>

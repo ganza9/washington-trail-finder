@@ -12,6 +12,7 @@ import { ResultComponent } from './result/result.component';
 import { AgmCoreModule } from '@agm/core';
 import { AgmJsMarkerClustererModule } from '@agm/js-marker-clusterer'
 
+
 @NgModule({
   declarations: [
     AppComponent,

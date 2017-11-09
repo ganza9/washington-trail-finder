@@ -16,10 +16,12 @@
     </div>
     <button (click)="searchByGeocode(city.value)">Get Hikes</button>
   </form>
-
-  <div *ngFor="let city of cities.results">
-    <h2>{{city.geometry.location.lat}}, {{city.geometry.location.lng}}</h2>
+  <div *ngIf="cities">
+    <div *ngFor="let city of cities.results">
+      <h2>{{city.geometry.location.lat}}, {{city.geometry.location.lng}}</h2>
+    </div>
   </div>
+
 
 <div *ngIf="hikes && !noHikes">
   <app-result [childHikes]="hikes"></app-result>

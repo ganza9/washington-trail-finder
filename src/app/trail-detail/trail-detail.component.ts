@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Trail } from '../trail.model';
 
 import { Router } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
+import { TrailInfoService } from './../trail-info.service';
 
 @Component({
   selector: 'app-trail-detail',
@@ -9,10 +11,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./trail-detail.component.css']
 })
 export class TrailDetailComponent implements OnInit {
-
-  constructor() { }
+  deatailId :number;
+  trailArray:any;
+  constructor(private route: ActivatedRoute, public appState: TrailInfoService){}
 
   ngOnInit() {
+    this.route.params.forEach((urlparameters)=>{
+      this.deatailId = Number(urlparameters['id']);
+    })
+    this.trailArray = this.appState.getData();
   }
+
 
 }
