@@ -1,13 +1,18 @@
 <h1>Hikes In The Area:</h1>
 
 <div *ngFor="let trail of childHikes.trails;" class="hike">
-  <div class="row">
+  <div class="row resultWrapper">
     <div class="col col-lg-6">
       <h2>{{trail.name}}</h2>
       <p>{{trail.summary}}</p>
     </div>
     <div class="col col-lg-6">
-      <img src="{{trail.imgSmall}}" (click)="showTrailDetails(trail)">
+      <span *ngIf="trail.imgSmall">
+        <img src="{{trail.imgSmall}}" (click)="showTrailDetails(trail)">
+      </span>
+      <span *ngIf="!trail.imgSmall">
+        <img src="../../assets/images/default.jpg" (click)="showTrailDetails(trail)">
+      </span>
     </div>
   </div>
 </div>

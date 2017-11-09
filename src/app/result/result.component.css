@@ -15,5 +15,10 @@ p {
 }
 
 img {
-  padding-bottom: 3em;
+  height: 17em;
+  width: 19em;
+  border-radius: 1em;
+}
+.hike{
+  margin-bottom: 3em;
 }
