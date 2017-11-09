@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { TrailInfoService } from './../trail-info.service';
 
 @Component({
   selector: 'app-map',
@@ -7,8 +8,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class MapComponent  implements OnInit {
   @Input() childHikes;
+  @Input() childLatLng;
   lat: number;
   long: number;
+  latLng: any;
   findcurrentPosition(){
     navigator.geolocation.getCurrentPosition(data => {
       this.lat = data.coords.latitude;
@@ -23,11 +26,10 @@ export class MapComponent  implements OnInit {
     infoWindow.open();
   }
 
-  constructor() {}
+  constructor(public appState: TrailInfoService) {}
 
   ngOnInit() {
     this.findcurrentPosition();
   }
-  title: string = 'My first AGM project';
 
 }
