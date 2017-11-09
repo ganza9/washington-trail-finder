@@ -14,28 +14,51 @@ import { CityToLatLonService } from './../city-to-lat-lon.service';
 export class SearchComponent implements OnInit {
   hikes: any[]=null;
   noHikes: boolean = false;
-  cities: any[]=null;
+  cities;
+  lattitude: string;
+  longitude: string;
 
   constructor(private washingtonHikeResults: WashingtonHikeApiResultsService, private geocodeResults: CityToLatLonService) { }
 
   searchByGeocode(location: string){
     this.geocodeResults.getByCityName(location).subscribe(response => {
       this.cities = response.json();
-    });
-  }
+      this.lattitude = this.cities.results[0].geometry.location.lat;
+      this.longitude = this.cities.results[0].geometry.location.lng;
 
-  getHikeResults(lat: string, lon: string){
-    this.noHikes = false;
-    this.washingtonHikeResults.getTrailByLatLon(lat, lon).subscribe(response => {
+      this.noHikes = false;
+
+      this.washingtonHikeResults.getTrailByLatLon(this.lattitude, this.longitude).subscribe(response => {
       if(response.json().trails.length > 0 ){
         this.hikes = response.json();
-        // console.log(this.hikes)
       }
       else {
         this.noHikes = true;
       }
-    });
-  }
+    })
+  })
+}
+
+
+  // getHikeResults(lat: string, lon: string){
+  //   this.noHikes = false;
+  //   this.washingtonHikeResults.getTrailByLatLon(lat, lon).subscribe(response => {
+  //     if(response.json().trails.length > 0 ){
+  //       this.hikes = response.json();
+  //
+  //     }
+  //     else {
+  //       this.noHikes = true;
+  //     }
+  //   });
+
+
+
+
+
+
+
+  // }
 
 
   ngOnInit() {

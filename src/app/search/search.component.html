@@ -14,7 +14,7 @@
       <label for="cityFind">Location:</label>
       <input type="text" #city>
     </div>
-    <button (click)="getHikeResults(lat.value, lon.value)" (click)="searchByGeocode(city.value)">Get Hikes</button>
+    <button (click)="searchByGeocode(city.value)">Get Hikes</button>
   </form>
 
   <div *ngFor="let city of cities.results">
